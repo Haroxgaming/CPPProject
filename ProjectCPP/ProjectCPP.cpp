@@ -4,7 +4,7 @@
 #include <signal.h>
 #include <vector>
 #include <windows.h>
-#include "Room.h"
+#include "Room/Room.h"
 
 void getRoomLuckLevel(Room& left, Room& back, Room& forward, Room& right)
 {
@@ -24,10 +24,44 @@ void getRoomLuckLevel(Room& left, Room& back, Room& forward, Room& right)
         normal++;
     }
 
+    switch (back.getRoomLuck())
+    {
+    case RoomType::lucky:
+        lucky++;
+        break;
+    case RoomType::Unlucky:
+        unlucky++;
+        break;
+    default:
+        normal++;
+    }
+
+    switch (forward.getRoomLuck())
+    {
+    case RoomType::lucky:
+        lucky++;
+        break;
+    case RoomType::Unlucky:
+        unlucky++;
+        break;
+    default:
+        normal++;
+    }
+
+    switch (right.getRoomLuck())
+    {
+    case RoomType::lucky:
+        lucky++;
+        break;
+    case RoomType::Unlucky:
+        unlucky++;
+        break;
+    default:
+        normal++;
+    }
     
-    std::cout << "Lucky : "<< lucky << std::endl
-    << "Lucky : "<< unlucky << std::endl
-    << "Lucky : "<< normal << std::endl;
+    std::cout<<"Voici les information des pièces qui t'entoure :"<<std::endl;
+    std::cout << "Lucky : "<< lucky << "    Unlucky : "<< unlucky << "    Normal : "<< normal << std::endl;
 }
 
 int main()
@@ -57,11 +91,7 @@ int main()
         getRoomLuckLevel(left, back, forward, right);
         
         std::cout<<"Choisi une direction : "<<std::endl
-        <<"   -Left: touche Q"<<std::endl
-        <<"   -Right: touche D"<<std::endl
-        <<"   -Forward: touche Z"<<std::endl
-        <<"   -Back: touche S"<<std::endl
-        <<"   -Boss: touche E"<<std::endl;
+        <<"   -Left: touche Q"<< "   -Right: touche D" << "   -Forward: touche Z" << "   -Back: touche S" << "   -Boss: touche E"<<std::endl;
         ch = _getch();
         
         system("cls");
