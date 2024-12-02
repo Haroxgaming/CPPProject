@@ -1,7 +1,5 @@
 ﻿#pragma once
 
-#include <random>
-
 enum class RoomType
 {
     lucky,
@@ -15,5 +13,7 @@ private:
     RoomType roomLuck;
 public:
 
+    Room();
     void setRoomLuck();
+    RoomType getRoomLuck();
 };

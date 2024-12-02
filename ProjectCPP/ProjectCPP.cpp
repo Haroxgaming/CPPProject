@@ -2,7 +2,33 @@
 #include <conio.h>
 #include <locale>
 #include <signal.h>
+#include <vector>
 #include <windows.h>
+#include "Room.h"
+
+void getRoomLuckLevel(Room& left, Room& back, Room& forward, Room& right)
+{
+    int lucky = 0;
+    int unlucky = 0;
+    int normal = 0;
+
+    switch (left.getRoomLuck())
+    {
+    case RoomType::lucky:
+        lucky++;
+        break;
+    case RoomType::Unlucky:
+        unlucky++;
+        break;
+    default:
+        normal++;
+    }
+
+    
+    std::cout << "Lucky : "<< lucky << std::endl
+    << "Lucky : "<< unlucky << std::endl
+    << "Lucky : "<< normal << std::endl;
+}
 
 int main()
 {
@@ -23,6 +49,12 @@ int main()
     while (true)
     {
         system("cls");
+        Room forward;
+        Room back;
+        Room right;
+        Room left;
+
+        getRoomLuckLevel(left, back, forward, right);
         
         std::cout<<"Choisi une direction : "<<std::endl
         <<"   -Left: touche Q"<<std::endl
