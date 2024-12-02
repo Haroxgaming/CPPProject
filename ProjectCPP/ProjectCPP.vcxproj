@@ -155,13 +155,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Conssomable.cpp" />
+    <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjectCPP.cpp" />
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Conssomable.h" />
+    <ClInclude Include="ennemy.h" />
     <ClInclude Include="HealthPotion.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Room.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
