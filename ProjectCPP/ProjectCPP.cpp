@@ -4,6 +4,8 @@
 #include <signal.h>
 #include <vector>
 #include <windows.h>
+
+#include "ennemy.h"
 #include "Room/Room.h"
 
 void getRoomLuckLevel(Room& left, Room& back, Room& forward, Room& right)
@@ -117,5 +119,6 @@ int main()
             std::cout<<"Entrer invalide";
         }
         Sleep(3000);
+        ennemy E;
     }
 }
