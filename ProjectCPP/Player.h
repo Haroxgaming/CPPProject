@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <string>
 #include "ennemy.h"
+#include <iostream>
 class Player
 {
 private:
