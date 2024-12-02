@@ -1,12 +1,19 @@
 ﻿#pragma once
 
+#include <random>
+
+enum class RoomType
+{
+    lucky,
+    Unlucky,
+    Normal
+};
+
 class Room
 {
 private:
-    int luckLevel = 1;
-    
+    RoomType roomLuck;
 public:
 
-    void setLuckLevel(int luck);
-    int getLuckLevel();
+    void setRoomLuck();
 };
