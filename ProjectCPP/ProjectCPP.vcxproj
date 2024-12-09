@@ -167,6 +167,7 @@
     <ClCompile Include="Consomable\Usage unique\VitalityUpgradePotion.cpp" />
     <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="HealSpell.cpp" />
     <ClCompile Include="Kobolt.cpp" />
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -328,6 +329,8 @@
     <ClCompile Include="Room\Unlucky\EnnemisPuissant.cpp" />
     <ClCompile Include="Room\Unlucky\Steal.cpp" />
     <ClCompile Include="Room\Unlucky\Trap.cpp" />
+    <ClCompile Include="Spell Fireball.cpp" />
+    <ClCompile Include="Spell.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consomable\Conssomable.h" />
@@ -343,6 +346,7 @@
     <ClInclude Include="Consomable\Usage unique\VitalityUpgradePotion.h" />
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="Goblin.h" />
+    <ClInclude Include="HealSpell.h" />
     <ClInclude Include="Kobolt.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Player.h" />
@@ -357,6 +361,8 @@
     <ClInclude Include="Room\Unlucky\EnnemisPuissant.h" />
     <ClInclude Include="Room\Unlucky\Steal.h" />
     <ClInclude Include="Room\Unlucky\Trap.h" />
+    <ClInclude Include="Spell Fireball.h" />
+    <ClInclude Include="Spell.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
