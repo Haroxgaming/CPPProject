@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="Conssomable.cpp" />
     <ClCompile Include="ennemy.cpp" />
+    <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjectCPP.cpp" />
@@ -319,6 +320,7 @@
   <ItemGroup>
     <ClInclude Include="Conssomable.h" />
     <ClInclude Include="ennemy.h" />
+    <ClInclude Include="Goblin.h" />
     <ClInclude Include="HealthPotion.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Room\Lucky\RestZone.h" />
