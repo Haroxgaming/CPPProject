@@ -13,7 +13,7 @@ int Player::getarmor()
 
 void Player::setPointDeVie(int vie)
 {
-    pointsDeVie = vie <= 0 ? 5 : vie;
+    pointsDeVie = vie <= 0 ? 0 : vie;
 }
 
 int Player::getPointDeVie()
@@ -33,7 +33,7 @@ int Player::getAttaque()
 
 void Player::setGold(int money)
 {
-    gold = money <= 0 ? 5 : money;
+    gold = money <= 0 ? 0 : money;
 }
 
 int Player::getGold()
@@ -43,7 +43,7 @@ int Player::getGold()
 
 void Player::setSpellNumber(int spell)
 {
-    spellNumber = spell <= 0 ? 5 : spell;
+    spellNumber = spell <= 0 ? 0 : spell;
 }
 
 int Player::getSpellNumber()

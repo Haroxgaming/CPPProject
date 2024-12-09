@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include "../Player.h"
+#include <random>
 
 enum class RoomType
 {
@@ -18,4 +20,5 @@ public:
     Room();
     virtual void setRoomLuck(RoomType roomWish);
     RoomType getRoomLuck();
+    void checkEndGame(Player& player);
 };

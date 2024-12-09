@@ -1,5 +1,5 @@
 ﻿#include "Room.h"
-#include <random>
+
 
 Room::Room()
 {
@@ -30,3 +30,10 @@ RoomType Room::getRoomLuck()
     return roomLuck;
 }
 
+void Room::checkEndGame(Player& player)
+{
+    if (player.getPointDeVie() == 0)
+    {
+        std::cout<<"fin de partie vous êtes mort!"<<std::endl;
+    }
+}
