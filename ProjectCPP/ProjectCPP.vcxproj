@@ -154,10 +154,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Conssomable.cpp" />
+    <ClCompile Include="Consomable\Conssomable.cpp" />
+    <ClCompile Include="Consomable\Usage unique\HealthPotion.cpp" />
     <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="Goblin.cpp" />
-    <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Kobolt.cpp" />
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -321,10 +321,10 @@
     <ClCompile Include="Room\Unlucky\Trap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Conssomable.h" />
+    <ClInclude Include="Consomable\Conssomable.h" />
+    <ClInclude Include="Consomable\Usage unique\HealthPotion.h" />
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="Goblin.h" />
-    <ClInclude Include="HealthPotion.h" />
     <ClInclude Include="Kobolt.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Player.h" />
