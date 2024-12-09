@@ -5,4 +5,5 @@ class RestZone : public Room
 {
 public:
     void setRoomLuck();
+    int rest(Player& target);
 };
