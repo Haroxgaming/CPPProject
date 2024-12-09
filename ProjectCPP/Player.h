@@ -9,6 +9,7 @@ private:
     int pointsDeVie;
     int attaque;
     int armure;
+    int inventory [5];
 
 public:
     
@@ -19,5 +20,6 @@ public:
 
 
     void attack(ennemy& target);
+    int getarmor();
     
 };
