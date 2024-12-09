@@ -7,7 +7,7 @@ HealthPotion::HealthPotion()
     effets = "Permet de soigner 10pv";
 }
 
-void HealthPotion::utiliser()
+void HealthPotion::utiliser(Player& target)
 {
-    
+    target.setPointDeVie(target.getPointDeVie()+soin);
 }    

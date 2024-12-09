@@ -12,6 +12,6 @@ public:
     HealthPotion();
         
 
-    void utiliser() override;
+    void utiliser(Player& target);
     
 };

@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="Consomable\Conssomable.cpp" />
     <ClCompile Include="Consomable\Usage unique\HealthPotion.cpp" />
+    <ClCompile Include="Consomable\Usage unique\ManaPotion.cpp" />
     <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="Kobolt.cpp" />
@@ -323,6 +324,7 @@
   <ItemGroup>
     <ClInclude Include="Consomable\Conssomable.h" />
     <ClInclude Include="Consomable\Usage unique\HealthPotion.h" />
+    <ClInclude Include="Consomable\Usage unique\ManaPotion.h" />
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Kobolt.h" />

@@ -1,10 +1,7 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
-#include <vector>
-#include <memory>
-
-                      // Classe parent Consommable
+#include "../Player.h"
 
 class Consommable {
 protected:
@@ -14,11 +11,7 @@ protected:
 
 public:
     virtual void utiliser(); 
-    virtual void afficherInfo() const {
-        std::cout << "Nom : " << name << ", Effet : " << effets 
-                  << ", Quantité : " << quantite << std::endl;
-    }
-
+    virtual void afficherInfo() const;
     virtual ~Consommable() = default; // <-- Destructeur
 };
 
