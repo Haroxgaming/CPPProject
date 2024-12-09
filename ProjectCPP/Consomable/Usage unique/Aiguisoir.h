@@ -5,5 +5,5 @@ class Aiguisoir : public Consommable
 {
 public:
     Aiguisoir();
-    void utiliser(Player& target);
+    virtual void utiliser(Player& target);
 };

@@ -9,6 +9,7 @@ int Treasure::roomEffect()
     switch (item)
     {
     case 1:
+        Aiguisoir aiguisoir;
         break;
     }
 }
