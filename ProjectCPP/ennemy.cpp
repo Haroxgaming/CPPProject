@@ -15,24 +15,50 @@ void ennemy::setHealth(int hp)
         Health = hp;
     }
 }
-
 int ennemy::getHealth()
 {
     return Health;
 }
+void ennemy::setArmorClass(int Am)
+{
+    if (Am <= 0)
+    {
+        ArmorClass = 1;
+    }
+    else
+    {
+        ArmorClass = Am;
+    }
+}
+int ennemy::getArmorClass()
+{
+    return ArmorClass;
+}
+void ennemy::setataque(int ataq)
+{
+    if (ataq <= 0)
+    {
+        attaque = 1;
+    }
+    else
+    {
+        attaque = ataq;
+    }
+    
+}
+int ennemy::getataque()
+{
+    return attaque;
+}
+
+
+
+
 
 void ennemy::ennemyAttaque(Player& target)
 {
     
 }
-
-
-
-
-
-
-
-
 
 
 

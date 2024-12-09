@@ -15,6 +15,12 @@ private :
 public:
     void setHealth(int hp);
     int getHealth();
+    void setArmorClass(int Am);
+    int getArmorClass();
+    void setataque(int ataq);
+    int getataque();
+    void setDes(int des);
+    int getDes();
     
     
     // Constructeur//
