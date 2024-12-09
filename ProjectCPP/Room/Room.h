@@ -11,6 +11,15 @@
 #include "../Consomable/Equipement/ArmureAdamantite.h"
 #include "../Consomable/Equipement/ArmureMitril.h"
 #include "../Consomable/Equipement/ArmureForge.h"
+#include "Lucky/RestZone.h"
+#include "Lucky/Shop.h"
+#include "Lucky/Treasure.h"
+#include "Normal/Deal.h"
+#include "Normal/Ennemis.h"
+#include "Normal/Nothing.h"
+#include "Unlucky/EnnemisPuissant.h"
+#include "Unlucky/Steal.h"
+#include "Unlucky/Trap.h"
 
 class Room
 {

@@ -4,25 +4,15 @@
 #include <signal.h>
 #include <vector>
 #include <windows.h>
-
 #include "ennemy.h"
 #include "Room/Room.h"
-#include "Room/Lucky/RestZone.h"
-#include "Room/Lucky/Shop.h"
-#include "Room/Lucky/Treasure.h"
-#include "Room/Normal/Deal.h"
-#include "Room/Normal/Ennemis.h"
-#include "Room/Normal/Nothing.h"
-#include "Room/Unlucky/EnnemisPuissant.h"
-#include "Room/Unlucky/Steal.h"
-#include "Room/Unlucky/Trap.h"
 
 void spawnRoom()
 {
     int lucky = 0;
     int unlucky = 0;
     int normal = 0;
-    for (int i = 0; i<4; i++)
+    for (int i = 0; i<3; i++)
     {
         std::random_device rd;
         std::mt19937 gen(rd());
@@ -31,55 +21,237 @@ void spawnRoom()
         switch (Room)
         {
         case 1:
-            RestZone ;
             lucky++;
+            switch (i)
+            {
+            case 0:
+                RestZone rest1;
+                break;
+            case 1:
+                RestZone rest2;
+                break;
+            case 2:
+                RestZone rest3;
+                break;
+            case 3:
+                RestZone rest4;
+                break;
+            }
             break;
         case 2:
-            Shop ;
             lucky++;
+            switch (i)
+            {
+            case 0:
+                Shop shop1;
+                break;
+            case 1:
+                Shop shop2;
+                break;
+            case 2:
+                Shop shop3;
+                break;
+            case 3:
+                Shop shop4;
+                break;
+            }
             break;
         case 3:
-            Treasure ;
             lucky++;
+            switch (i)
+            {
+            case 0:
+                Treasure treasure1;
+                break;
+            case 1:
+                Treasure treasure2;
+                break;
+            case 2:
+                Treasure treasure3;
+                break;
+            case 3:
+                Treasure treasure4;
+                break;
+            }
             break;
         case 4:
-            EnnemisPuissant ;
             unlucky++;
+            switch (i)
+            {
+            case 0:
+                EnnemisPuissant ennemiPuissant1;
+                break;
+            case 1:
+                EnnemisPuissant ennemiPuissant2;
+                break;
+            case 2:
+                EnnemisPuissant ennemiPuissant3;
+                break;
+            case 3:
+                EnnemisPuissant ennemiPuissant4;
+                break;
+            }
             break;
         case 5:
-            Steal ;
             unlucky++;
+            switch (i)
+            {
+            case 0:
+                Steal steal1;
+                break;
+            case 1:
+                Steal steal2;
+                break;
+            case 2:
+                Steal steal3;
+                break;
+            case 3:
+                Steal steal4;
+                break;
+            }
             break;
         case 6:
-            Trap ;
             unlucky++;
+            switch (i)
+            {
+            case 0:
+                Trap trap1;
+                break;
+            case 1:
+                Trap trap2;
+                break;
+            case 2:
+                Trap trap3;
+                break;
+            case 3:
+                Trap trap4;
+                break;
+            }
             break;
         case 7:
-            Deal ;
             normal++;
+            switch (i)
+            {
+            case 0:
+                Deal deal1;
+                break;
+            case 1:
+                Deal deal2;
+                break;
+            case 2:
+                Deal deal3;
+                break;
+            case 3:
+                Deal deal4;
+                break;
+            }
             break;
         case 8:
-            Deal ;
             normal++;
+            switch (i)
+            {
+            case 0:
+                Deal deal1;
+                break;
+            case 1:
+                Deal deal2;
+                break;
+            case 2:
+                Deal deal3;
+                break;
+            case 3:
+                Deal deal4;
+                break;
+            }
             break;
         case 9:
-            Ennemis ;
             normal++;
+            switch (i)
+            {
+            case 0:
+                Ennemis ennemis1;
+                break;
+            case 1:
+                Ennemis ennemis2;
+                break;
+            case 2:
+                Ennemis ennemis3;
+                break;
+            case 3:
+                Ennemis ennemis4;
+                break;
+            }
             break;
         case 10:
-            Ennemis ;
             normal++;
+            switch (i)
+            {
+            case 0:
+                Ennemis ennemis1;
+                break;
+            case 1:
+                Ennemis ennemis2;
+                break;
+            case 2:
+                Ennemis ennemis3;
+                break;
+            case 3:
+                Ennemis ennemis4;
+                break;
+            }
             break;
         case 11:
-            Nothing ;
+            switch (i)
+            {
+        case 0:
+            Nothing nothing1;
+                break;
+        case 1:
+            Nothing nothing2;
+                break;
+        case 2:
+            Nothing nothing3;
+                break;
+        case 3:
+            Nothing nothing4;
+                break;
+            }
             normal++;
             break;
         case 12:
-            Nothing ;
+            switch (i)
+            {
+        case 0:
+            Nothing nothing1;
+                break;
+        case 1:
+            Nothing nothing2;
+                break;
+        case 2:
+            Nothing nothing3;
+                break;
+        case 3:
+            Nothing nothing4;
+                break;
+            }
             normal++;
             break;
         default:
-            Nothing ;
+            switch (i)
+            {
+        case 0:
+            Nothing nothing1;
+                break;
+        case 1:
+            Nothing nothing2;
+                break;
+        case 2:
+            Nothing nothing3;
+                break;
+        case 3:
+            Nothing nothing4;
+                break;
+            }
             normal++;
         }
     }
