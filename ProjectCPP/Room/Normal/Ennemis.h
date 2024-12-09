@@ -4,5 +4,5 @@
 class Ennemis : public Room
 {
 public:
-    void setRoomLuck();
+    
 };

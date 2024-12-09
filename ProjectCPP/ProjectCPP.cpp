@@ -7,61 +7,82 @@
 
 #include "ennemy.h"
 #include "Room/Room.h"
+#include "Room/Lucky/RestZone.h"
+#include "Room/Lucky/Shop.h"
+#include "Room/Lucky/Treasure.h"
+#include "Room/Normal/Deal.h"
+#include "Room/Normal/Ennemis.h"
+#include "Room/Normal/Nothing.h"
+#include "Room/Unlucky/EnnemisPuissant.h"
+#include "Room/Unlucky/Steal.h"
+#include "Room/Unlucky/Trap.h"
 
-void getRoomLuckLevel(Room& left, Room& back, Room& forward, Room& right)
+void spawnRoom()
 {
     int lucky = 0;
     int unlucky = 0;
     int normal = 0;
-
-    switch (left.getRoomLuck())
+    for (int i = 0; i<4; i++)
     {
-    case RoomType::lucky:
-        lucky++;
-        break;
-    case RoomType::Unlucky:
-        unlucky++;
-        break;
-    default:
-        normal++;
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(1, 12);
+        int Room = dis(gen);
+        switch (Room)
+        {
+        case 1:
+            RestZone ;
+            lucky++;
+            break;
+        case 2:
+            Shop ;
+            lucky++;
+            break;
+        case 3:
+            Treasure ;
+            lucky++;
+            break;
+        case 4:
+            EnnemisPuissant ;
+            unlucky++;
+            break;
+        case 5:
+            Steal ;
+            unlucky++;
+            break;
+        case 6:
+            Trap ;
+            unlucky++;
+            break;
+        case 7:
+            Deal ;
+            normal++;
+            break;
+        case 8:
+            Deal ;
+            normal++;
+            break;
+        case 9:
+            Ennemis ;
+            normal++;
+            break;
+        case 10:
+            Ennemis ;
+            normal++;
+            break;
+        case 11:
+            Nothing ;
+            normal++;
+            break;
+        case 12:
+            Nothing ;
+            normal++;
+            break;
+        default:
+            Nothing ;
+            normal++;
+        }
     }
-
-    switch (back.getRoomLuck())
-    {
-    case RoomType::lucky:
-        lucky++;
-        break;
-    case RoomType::Unlucky:
-        unlucky++;
-        break;
-    default:
-        normal++;
-    }
-
-    switch (forward.getRoomLuck())
-    {
-    case RoomType::lucky:
-        lucky++;
-        break;
-    case RoomType::Unlucky:
-        unlucky++;
-        break;
-    default:
-        normal++;
-    }
-
-    switch (right.getRoomLuck())
-    {
-    case RoomType::lucky:
-        lucky++;
-        break;
-    case RoomType::Unlucky:
-        unlucky++;
-        break;
-    default:
-        normal++;
-    }
-    
     std::cout<<"Voici les information des pièces qui t'entoure :"<<std::endl;
     std::cout << "Lucky : "<< lucky << "    Unlucky : "<< unlucky << "    Normal : "<< normal << std::endl;
 }
@@ -85,12 +106,8 @@ int main()
     while (true)
     {
         system("cls");
-        Room forward;
-        Room back;
-        Room right;
-        Room left;
-
-        getRoomLuckLevel(left, back, forward, right);
+        
+        spawnRoom();
         
         std::cout<<"Choisi une direction : "<<std::endl
         <<"   -Left: touche Q"<< "   -Right: touche D" << "   -Forward: touche Z" << "   -Back: touche S" << "   -Boss: touche E"<<std::endl;
@@ -119,6 +136,5 @@ int main()
             std::cout<<"Entrer invalide";
         }
         Sleep(3000);
-        ennemy E;
     }
 }

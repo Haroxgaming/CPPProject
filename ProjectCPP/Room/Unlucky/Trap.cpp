@@ -1,10 +1,5 @@
 ﻿#include "Trap.h"
 
-void Trap::setRoomLuck()
-{
-    roomLuck = RoomType::Unlucky;
-}
-
 int Trap::roomEffect(Player& target)
 {
     std::random_device rd;
@@ -12,5 +7,5 @@ int Trap::roomEffect(Player& target)
     std::uniform_int_distribution<> dis(1, 8);
     int damage = dis(gen);
     target.setPointDeVie(target.getPointDeVie() - damage);
-    checkEndGame(target);
+    target.checkEndGame();
 }

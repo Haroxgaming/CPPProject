@@ -10,4 +10,5 @@ HealthPotion::HealthPotion()
 void HealthPotion::utiliser(Player& target)
 {
     target.setPointDeVie(target.getPointDeVie()+soin);
-}    
+}
+

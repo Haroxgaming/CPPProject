@@ -4,5 +4,5 @@
 class Deal : public Room
 {
 public:
-    void setRoomLuck();
+    
 };

@@ -6,5 +6,4 @@ class Shop : public Room
 private:
     
 public:
-    void setRoomLuck();
 };

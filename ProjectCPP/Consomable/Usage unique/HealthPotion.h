@@ -10,8 +10,6 @@ private:
 public:
     
     HealthPotion();
-        
-
     void utiliser(Player& target);
     
 };

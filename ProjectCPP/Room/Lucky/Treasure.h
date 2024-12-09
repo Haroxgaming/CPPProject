@@ -4,5 +4,5 @@
 class Treasure : public Room
 {
 public:
-    void setRoomLuck();
+    int roomEffect();
 };

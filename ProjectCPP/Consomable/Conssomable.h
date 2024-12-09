@@ -10,6 +10,7 @@ protected:
     int quantite;
 
 public:
+    Consommable();
     virtual void utiliser() = 0; 
     virtual void afficherInfo() const;
 };

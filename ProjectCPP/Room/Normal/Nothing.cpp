@@ -1,6 +1,6 @@
 ﻿#include "Nothing.h"
 
-void Nothing::setRoomLuck()
+int Nothing::roomEffect()
 {
-    roomLuck = RoomType::Normal;
+    return 0;
 }

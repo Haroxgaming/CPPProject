@@ -1,10 +1,5 @@
 ﻿#include "Steal.h"
 
-void Steal::setRoomLuck()
-{
-    roomLuck = RoomType::Unlucky;
-}
-
 int Steal::roomEffect(Player& target)
 {
     std::random_device rd;

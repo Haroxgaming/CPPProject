@@ -4,5 +4,5 @@
 class Nothing : public Room
 {
 public:
-    void setRoomLuck();
+    int roomEffect();
 };

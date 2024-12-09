@@ -1,11 +1,7 @@
 ﻿#include "RestZone.h"
 
-void RestZone::setRoomLuck()
-{
-    roomLuck = RoomType::lucky;
-}
-
-int RestZone::rest(Player& target)
+int RestZone::roomEffect(Player& target)
 {
     target.setSpellNumber(target.getSpellNumber() + 1);
+    return 0;
 }
