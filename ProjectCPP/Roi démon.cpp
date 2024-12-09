@@ -6,3 +6,5 @@ RoiDemon::RoiDemon()
     setArmorClass(15);
     setattaque(12);
 }
+
+
