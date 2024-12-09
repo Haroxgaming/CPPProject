@@ -34,7 +34,7 @@ int ennemy::getArmorClass()
 {
     return ArmorClass;
 }
-void ennemy::setataque(int ataq)
+void ennemy::setattaque(int ataq)
 {
     if (ataq <= 0)
     {
@@ -52,11 +52,16 @@ int ennemy::getataque()
 }
 
 
-
-
+ennemy::ennemy()
+{
+    
+}
 
 void ennemy::ennemyAttaque(Player& target)
 {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, attaque);
     
 }
 

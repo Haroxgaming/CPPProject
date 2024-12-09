@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include "ennemy.h"
 
-class Goblin : public ennemy
+class Kobolt : public ennemy
 {
 public:
-    Goblin();
+    Kobolt();
 };

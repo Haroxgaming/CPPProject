@@ -158,8 +158,11 @@
     <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
+    <ClCompile Include="Kobolt.cpp" />
+    <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjectCPP.cpp" />
+    <ClCompile Include="Roi démon.cpp" />
     <ClCompile Include="Room\Lucky\RestZone.cpp" />
     <ClCompile Include="Room\Lucky\Shop.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
@@ -322,7 +325,10 @@
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="HealthPotion.h" />
+    <ClInclude Include="Kobolt.h" />
+    <ClInclude Include="Ogre.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Roi démon.h" />
     <ClInclude Include="Room\Lucky\RestZone.h" />
     <ClInclude Include="Room\Lucky\Shop.h" />
     <ClInclude Include="Room\Lucky\Treasure.h" />

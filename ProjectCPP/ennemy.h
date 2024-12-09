@@ -9,15 +9,15 @@ public:
 private :
     int Health;
     int ArmorClass;
-    int attaque;
     int des;
-
+protected :
+    int attaque;
 public:
     void setHealth(int hp);
     int getHealth();
     void setArmorClass(int Am);
     int getArmorClass();
-    void setataque(int ataq);
+    void setattaque(int ataq);
     int getataque();
     void setDes(int des);
     int getDes();
@@ -25,8 +25,9 @@ public:
     
     // Constructeur//
     
-    ennemy(const std::string& nom, int Health, int ArmorClass,int attaque,int des)
-        : Health(Health), ArmorClass(ArmorClass), attaque(attaque),des(des){}
+    ennemy();
+    // const std::string& nom, int Health, int ArmorClass,int attaque,int des)
+    //     : Health(Health), ArmorClass(ArmorClass), attaque(attaque),des(des){}
 
     void ennemyAttaque(Player& target);
     void ennemydes(Player& target);
