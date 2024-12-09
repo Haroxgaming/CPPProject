@@ -1,10 +1,8 @@
 ﻿#pragma once
 #include "../Room.h"
 
-class Shop : public Room
+class Treasure : public Room
 {
-private:
-    
 public:
     void setRoomLuck();
 };

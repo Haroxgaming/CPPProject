@@ -20,23 +20,9 @@ Room::Room()
     }
 }
 
-void Room::setRoomLuck()
+void Room::setRoomLuck(RoomType roomWish)
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(0, 4);
-    int luckLevel = dis(gen);
-    switch (luckLevel)
-    {
-    case 0:
-        roomLuck = RoomType::lucky;
-        break;
-    case 1:
-        roomLuck = RoomType::Unlucky;
-        break;
-    default:
-        roomLuck = RoomType::Normal;
-    }
+    roomLuck = roomWish;
 }
 
 RoomType Room::getRoomLuck()

@@ -10,10 +10,12 @@ enum class RoomType
 class Room
 {
 private:
+    int LuckLevel;
+protected:
     RoomType roomLuck;
 public:
 
     Room();
-    void setRoomLuck();
+    virtual void setRoomLuck(RoomType roomWish);
     RoomType getRoomLuck();
 };

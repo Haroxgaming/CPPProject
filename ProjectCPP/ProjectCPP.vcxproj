@@ -159,6 +159,7 @@
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjectCPP.cpp" />
+    <ClCompile Include="Room\Lucky\RestZone.cpp" />
     <ClCompile Include="Room\Lucky\Shop.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -233,6 +234,10 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="Room\Lucky\Treasure.cpp" />
+    <ClCompile Include="Room\Normal\Deal.cpp" />
+    <ClCompile Include="Room\Normal\Ennemis.cpp" />
+    <ClCompile Include="Room\Normal\Nothing.cpp" />
     <ClCompile Include="Room\Room.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -307,18 +312,25 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="Room\Unlucky\EnnemisPuissant.cpp" />
+    <ClCompile Include="Room\Unlucky\Steal.cpp" />
+    <ClCompile Include="Room\Unlucky\Trap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Conssomable.h" />
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="HealthPotion.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Room\Lucky\RestZone.h" />
     <ClInclude Include="Room\Lucky\Shop.h" />
+    <ClInclude Include="Room\Lucky\Treasure.h" />
+    <ClInclude Include="Room\Normal\Deal.h" />
+    <ClInclude Include="Room\Normal\Ennemis.h" />
+    <ClInclude Include="Room\Normal\Nothing.h" />
     <ClInclude Include="Room\Room.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Room\Normal\" />
-    <Folder Include="Room\Unlucky\" />
+    <ClInclude Include="Room\Unlucky\EnnemisPuissant.h" />
+    <ClInclude Include="Room\Unlucky\Steal.h" />
+    <ClInclude Include="Room\Unlucky\Trap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
