@@ -169,6 +169,7 @@
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealSpell.cpp" />
     <ClCompile Include="Kobolt.cpp" />
+    <ClCompile Include="Meteor.cpp" />
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjectCPP.cpp" />
@@ -348,6 +349,7 @@
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="HealSpell.h" />
     <ClInclude Include="Kobolt.h" />
+    <ClInclude Include="Meteor.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Roi démon.h" />
