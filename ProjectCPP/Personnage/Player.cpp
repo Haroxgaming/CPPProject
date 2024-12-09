@@ -1,12 +1,11 @@
 ﻿#include "Player.h"
-#include <iostream>
 
 Player::Player()
 {
     nom = "Rémi";
-    pointsDeVie = 20;
+    Health = 20;
     pvMax = 20;
-    attaque = 8;
+    attack = 8;
     ATKBuff = false;
     armure = 10;
     gold = 0;
@@ -28,17 +27,7 @@ bool Player::getATKBuff()
     return ATKBuff;
 }
 
-void Player::setPVMax(int AddHP)
-{
-    pvMax = pvMax+AddHP;
-}
-
-int Player::getPVMax()
-{
-    return pvMax;
-}
-
-void Player::attack(ennemy& target)
+void Player::attack(Character& target)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -53,37 +42,6 @@ void Player::attack(ennemy& target)
     {
         target.setHealth(target.getHealth()-damage);
     }
-}
-
-void Player::setarmor(int armor)
-{
-    armure = armor <= 0 ? 5 : armor;
-}
-
-int Player::getarmor()
-{
-    return armure;
-}
-
-void Player::setPointDeVie(int vie)
-{
-    pointsDeVie = vie <= 0 ? 0 : vie;
-    if (pointsDeVie > pvMax) pointsDeVie = pvMax;
-}
-
-int Player::getPointDeVie()
-{
-    return pointsDeVie;
-}
-
-void Player::setAttaque(int attack)
-{
-    attaque = attack <= 0 ? 8 : attack;
-}
-
-int Player::getAttaque()
-{
-    return attaque;
 }
 
 void Player::setGold(int money)
@@ -108,7 +66,7 @@ int Player::getSpellNumber()
 
 void Player::checkEndGame()
 {
-    if (getPointDeVie() == 0)
+    if (getHealth() == 0)
     {
         std::cout<<"fin de partie vous êtes mort!"<<std::endl;
     }
