@@ -13,18 +13,7 @@ protected:
     int quantite;
 
 public:
-    
-                     //Constructeur(Conso)//
-    
-    
-    Consommable(const std::string& nom, const std::string& effet, int quantite)
-        : name(nom), effets(effet), quantite(quantite) {}
-
-    
-             // Use consommable//
-
-    
-    virtual void utiliser() = 0; 
+    virtual void utiliser(); 
     virtual void afficherInfo() const {
         std::cout << "Nom : " << name << ", Effet : " << effets 
                   << ", Quantité : " << quantite << std::endl;
