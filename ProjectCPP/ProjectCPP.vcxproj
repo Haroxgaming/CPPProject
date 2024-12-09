@@ -155,8 +155,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Consomable\Conssomable.cpp" />
+    <ClCompile Include="Consomable\Equipement\ArmureForge.cpp" />
+    <ClCompile Include="Consomable\Equipement\EpeeForge.cpp" />
+    <ClCompile Include="Consomable\Usage unique\Aiguisoir.cpp" />
     <ClCompile Include="Consomable\Usage unique\HealthPotion.cpp" />
     <ClCompile Include="Consomable\Usage unique\ManaPotion.cpp" />
+    <ClCompile Include="Consomable\Usage unique\VitalityUpgradePotion.cpp" />
     <ClCompile Include="ennemy.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="Kobolt.cpp" />
@@ -323,8 +327,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consomable\Conssomable.h" />
+    <ClInclude Include="Consomable\Equipement\ArmureForge.h" />
+    <ClInclude Include="Consomable\Equipement\EpeeForge.h" />
+    <ClInclude Include="Consomable\Usage unique\Aiguisoir.h" />
     <ClInclude Include="Consomable\Usage unique\HealthPotion.h" />
     <ClInclude Include="Consomable\Usage unique\ManaPotion.h" />
+    <ClInclude Include="Consomable\Usage unique\VitalityUpgradePotion.h" />
     <ClInclude Include="ennemy.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Kobolt.h" />

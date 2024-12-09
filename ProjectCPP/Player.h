@@ -2,13 +2,16 @@
 #include <string>
 #include "ennemy.h"
 #include <iostream>
+#include <random>
 
 class Player
 {
 private:
     std::string nom;
     int pointsDeVie;
+    int pvMax;
     int attaque;
+    bool ATKBuff = false;
     int armure;
     int inventory [5];
     int gold;
@@ -18,10 +21,14 @@ public:
     
                             // Constructeur//
     
-    Player(const std::string& nom, int pointsDeVie, int attaque, int defense)
-        : nom(nom), pointsDeVie(pointsDeVie), attaque(attaque), armure(defense) {}
+    Player(const std::string& name);
 
+    void setATKBuff(bool buff);
+    bool getATKBuff();
 
+    void setPVMax(int AddHP);
+    int getPVMax();
+    
     void attack(ennemy& target);
 
     void setarmor(int armor);
@@ -38,5 +45,7 @@ public:
 
     void setSpellNumber(int spell);
     int getSpellNumber();
+
+    void checkEndGame();
     
 };

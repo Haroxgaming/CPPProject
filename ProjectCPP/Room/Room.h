@@ -20,5 +20,4 @@ public:
     Room();
     virtual void setRoomLuck(RoomType roomWish);
     RoomType getRoomLuck();
-    void checkEndGame(Player& player);
 };
