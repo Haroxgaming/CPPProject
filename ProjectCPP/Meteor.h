@@ -10,5 +10,6 @@ private:
 public:
     
     Meteor();
+    void utiliser(ennemy& target);
     
 };

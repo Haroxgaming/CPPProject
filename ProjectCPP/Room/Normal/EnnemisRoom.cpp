@@ -1,7 +1,6 @@
 ﻿#include "EnnemisRoom.h"
 
-#include "../../Goblin.h"
-#include "../../Kobolt.h"
+
 
 ennemy EnnemisRoom::roomEffect()
 {

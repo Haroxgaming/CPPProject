@@ -1,6 +1,18 @@
 ﻿#include "Player.h"
 #include <iostream>
 
+Player::Player()
+{
+    nom = "Rémi";
+    pointsDeVie = 20;
+    pvMax = 20;
+    attaque = 8;
+    ATKBuff = false;
+    armure = 10;
+    gold = 0;
+    spellNumber = 2;
+}
+
 Player::Player(const std::string& name)
 {
     nom = name;
@@ -31,14 +43,15 @@ void Player::attack(ennemy& target)
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, attaque);
+    int damage = dis(gen);
     if (ATKBuff)
     {
-        target.setHealth(target.getHealth()-(attaque+5));
+        target.setHealth(target.getHealth()-(damage+5));
         setATKBuff(false);
     }
     else
     {
-        target.setHealth(target.getHealth()-attaque);
+        target.setHealth(target.getHealth()-damage);
     }
 }
 

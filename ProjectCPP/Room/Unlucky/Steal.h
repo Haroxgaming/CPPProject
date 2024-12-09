@@ -1,4 +1,5 @@
 ﻿#pragma once
+
 #include "../Room.h"
 
 class Steal : public Room

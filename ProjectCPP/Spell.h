@@ -1,6 +1,4 @@
 ﻿#pragma once
-#include <iostream>
-#include <string>
 #include "Player.h"
 
 class Spell {
@@ -11,7 +9,6 @@ protected:
 
 public:
     Spell();
-    virtual void utiliser(Player& target); 
 };
 
 

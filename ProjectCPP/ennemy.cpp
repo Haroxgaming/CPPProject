@@ -58,18 +58,23 @@ ennemy::ennemy()
 
 void ennemy::ennemyAttaque(Player& target)
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, attaque);
-    
+    if (ennemydes(target))
+    {
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(1, attaque);
+        int damage = dis(gen);
+        target.setPointDeVie(target.getPointDeVie()-damage);
+        target.checkEndGame();
+        std::cout << "L'ennemi a fait " << attaque << " dégâts au joueur!" << std::endl;
+    }
 }
 
 
 
 
-void ennemy::ennemydes(Player& target)
+bool ennemy::ennemydes(Player& target)
 {
- bool Superieur = false;
     class PLayer;
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -78,14 +83,12 @@ void ennemy::ennemydes(Player& target)
     
     if (de > target.getarmor())
     {
-        Superieur = true;
-        ennemyAttaque(target);
-        std::cout << "L'ennemi a fait " << attaque << " dégâts au joueur!" << std::endl;
+        return true;
     }
     else
     {
-        Superieur = false;
         std::cout << "L'ennemi a raté son attaque" << std::endl;
+        return false;
     }
     
     

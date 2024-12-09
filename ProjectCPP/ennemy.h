@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include <iostream>
-
 #include "Player.h"
 
 class ennemy
@@ -31,7 +30,7 @@ public:
     //     : Health(Health), ArmorClass(ArmorClass), attaque(attaque),des(des){}
 
     void ennemyAttaque(Player& target);
-    void ennemydes(Player& target);
+    bool ennemydes(Player& target);
     
     
 };

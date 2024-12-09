@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include <string>
 #include "ennemy.h"
-#include <iostream>
 #include <random>
 
 class Player
@@ -20,7 +19,7 @@ private:
 public:
     
                             // Constructeur//
-    
+    Player();    
     Player(const std::string& name);
 
     void setATKBuff(bool buff);

@@ -10,6 +10,6 @@ private:
 public:
     
     SpellFireball();
-    void utiliser(Player& target);
+    void utiliser(ennemy& target);
     
 };
