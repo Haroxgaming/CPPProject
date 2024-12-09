@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "../Player.h"
 #include <random>
+#include "../ennemy.h"
 #include "../Consomable/Usage unique/Aiguisoir.h"
 #include "../Consomable/Usage unique/HealthPotion.h"
 #include "../Consomable/Usage unique/ManaPotion.h"
@@ -15,7 +16,7 @@
 #include "Lucky/Shop.h"
 #include "Lucky/Treasure.h"
 #include "Normal/Deal.h"
-#include "Normal/Ennemis.h"
+#include "Normal/EnnemisRoom.h"
 #include "Normal/Nothing.h"
 #include "Unlucky/EnnemisPuissant.h"
 #include "Unlucky/Steal.h"
@@ -23,5 +24,5 @@
 
 class Room
 {
-    virtual int roomEffect() = 0;
+    int roomEffect();
 };
