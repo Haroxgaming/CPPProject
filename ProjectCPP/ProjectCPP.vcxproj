@@ -155,8 +155,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Consomable\Conssomable.cpp" />
+    <ClCompile Include="Consomable\Equipement\ArmureAdamantite.cpp" />
     <ClCompile Include="Consomable\Equipement\ArmureForge.cpp" />
+    <ClCompile Include="Consomable\Equipement\ArmureMitril.cpp" />
+    <ClCompile Include="Consomable\Equipement\EpeeAdamantite.cpp" />
     <ClCompile Include="Consomable\Equipement\EpeeForge.cpp" />
+    <ClCompile Include="Consomable\Equipement\EpeeMitril.cpp" />
     <ClCompile Include="Consomable\Usage unique\Aiguisoir.cpp" />
     <ClCompile Include="Consomable\Usage unique\HealthPotion.cpp" />
     <ClCompile Include="Consomable\Usage unique\ManaPotion.cpp" />
@@ -327,8 +331,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consomable\Conssomable.h" />
+    <ClInclude Include="Consomable\Equipement\ArmureAdamantite.h" />
     <ClInclude Include="Consomable\Equipement\ArmureForge.h" />
+    <ClInclude Include="Consomable\Equipement\ArmureMitril.h" />
+    <ClInclude Include="Consomable\Equipement\EpeeAdamantite.h" />
     <ClInclude Include="Consomable\Equipement\EpeeForge.h" />
+    <ClInclude Include="Consomable\Equipement\EpeeMitril.h" />
     <ClInclude Include="Consomable\Usage unique\Aiguisoir.h" />
     <ClInclude Include="Consomable\Usage unique\HealthPotion.h" />
     <ClInclude Include="Consomable\Usage unique\ManaPotion.h" />

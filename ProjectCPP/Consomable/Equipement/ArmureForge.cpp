@@ -3,8 +3,8 @@
 ArmureForge::ArmureForge()
 {
     quantite = 1;
-    name = "Epée forgé";
-    effets = "Passe l'attaque du joueur a 1D10";
+    name = "Armure forgé";
+    effets = "Passe la classe d'armure a 11";
 }
 
 void ArmureForge::utiliser(Player& target)

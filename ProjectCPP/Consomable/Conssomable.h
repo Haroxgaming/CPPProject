@@ -10,9 +10,8 @@ protected:
     int quantite;
 
 public:
-    virtual void utiliser(); 
+    virtual void utiliser() = 0; 
     virtual void afficherInfo() const;
-    virtual ~Consommable() = default; // <-- Destructeur
 };
 
 
