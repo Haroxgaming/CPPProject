@@ -3,7 +3,7 @@
 
 Goblin::Goblin()
 {
-    setHealth(12);
-    setArmorClass(7);
+    Health = 12;
+    armorClass = 7;
 }
 

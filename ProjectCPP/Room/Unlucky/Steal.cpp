@@ -7,4 +7,5 @@ int Steal::roomEffect(Player& target)
     std::uniform_int_distribution<> dis(1, 20);
     int stealed = dis(gen);
     target.setGold(target.getGold() - stealed);
+    std::cout<<"On vient de vous volez "<< stealed << " d'or!!!"<<std::endl;
 }

@@ -4,5 +4,5 @@
 class Treasure : public Room
 {
 public:
-    int roomEffect();
+    virtual int roomEffect();
 };

@@ -5,5 +5,5 @@
 class Nothing : public Room
 {
 public:
-    int roomEffect();
+    virtual int roomEffect();
 };

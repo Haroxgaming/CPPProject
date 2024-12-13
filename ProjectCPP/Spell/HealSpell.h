@@ -4,9 +4,6 @@
 
 class HealSpell : public Spell
 {
-private:
-    int Heal;
-
 public:
     
     HealSpell();

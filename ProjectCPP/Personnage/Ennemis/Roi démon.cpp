@@ -2,9 +2,9 @@
 
 RoiDemon::RoiDemon()
 {
-    setHealth(50);
-    setArmorClass(15);
-    setattaque(12);
+    Health = 50;
+    armorClass = 15;
+    Degats = 12;
 }
 
 

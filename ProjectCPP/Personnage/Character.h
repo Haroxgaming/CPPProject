@@ -6,10 +6,10 @@
 
 class Character
 {
-private:
+protected:
     int Health;
     int pvMax;
-    int attack;
+    int Degats;
     int armorClass;
 public:
     Character();
@@ -20,9 +20,12 @@ public:
     void SetPVMax(int AddMax);
     int getPVMax();
 
-    void setAttack(int ATK);
-    int getAttack();
+    void setDegats(int ATK);
+    int getDegats();
 
     void setArmorClass(int armor);
     int getArmorClass();
+
+    virtual void attack(Character& target, bool crit);
+    virtual void rollDice (Character& target);
 };

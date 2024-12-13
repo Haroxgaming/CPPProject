@@ -5,5 +5,5 @@
 class RestZone : public Room
 {
 public:
-    int roomEffect(Player& target);
+    virtual int roomEffect(Player& target);
 };

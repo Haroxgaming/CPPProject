@@ -1,25 +1,10 @@
 ﻿#pragma once
-#include "../Character.h"
+#include "../Player.h"
 
-class ennemy
+class ennemy : public Character
 {
 public:
     
-private :
-    int ArmorClass;
-protected :
-    int attaque;
-public:
-    
-    
-    // Constructeur//
-    
-    ennemy();
-    // const std::string& nom, int Health, int ArmorClass,int attaque,int des)
-    //     : Health(Health), ArmorClass(ArmorClass), attaque(attaque),des(des){}
-
-    void ennemyAttaque(Character& target);
-    bool ennemydes(Character& target);
-    
+    virtual void attack(Player& target, bool crit);
     
 };

@@ -5,9 +5,9 @@ Player::Player()
     nom = "Rémi";
     Health = 20;
     pvMax = 20;
-    attack = 8;
+    Degats = 8;
     ATKBuff = false;
-    armure = 10;
+    armorClass = 10;
     gold = 0;
     spellNumber = 2;
 }
@@ -27,22 +27,7 @@ bool Player::getATKBuff()
     return ATKBuff;
 }
 
-void Player::attack(Character& target)
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, attaque);
-    int damage = dis(gen);
-    if (ATKBuff)
-    {
-        target.setHealth(target.getHealth()-(damage+5));
-        setATKBuff(false);
-    }
-    else
-    {
-        target.setHealth(target.getHealth()-damage);
-    }
-}
+
 
 void Player::setGold(int money)
 {
@@ -66,8 +51,51 @@ int Player::getSpellNumber()
 
 void Player::checkEndGame()
 {
-    if (getHealth() == 0)
+    if (getHealth() <= 0)
     {
         std::cout<<"fin de partie vous êtes mort!"<<std::endl;
+    }
+}
+
+void Player::attack(Character& target, bool crit)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, Degats);
+    int damage = dis(gen);
+    if (crit)
+    {
+        target.setHealth(target.getHealth()-(damage+Degats));
+    }
+    else
+    {
+        target.setHealth(target.getHealth()-damage);
+    }
+}
+
+void Player::rollDice(Character& target)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 20);
+    int dice = dis(gen);
+    if(dice == 20)
+    {
+        attack(target, true);
+    }
+    else
+    {
+        if (dice>target.getArmorClass())
+        {
+            attack(target, false);
+        }
+        else
+        {
+            if (dice==1)
+            {
+                setHealth(getHealth()-4);
+                checkEndGame();
+            }
+        }
     }
 }

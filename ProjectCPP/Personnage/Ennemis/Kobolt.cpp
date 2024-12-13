@@ -2,7 +2,7 @@
 
 Kobolt::Kobolt()
 {
-    setHealth(20);
-    setArmorClass(10);
-    setattaque(6);
+    Health = 20;
+    armorClass = 10;
+    Degats = 6;
 }

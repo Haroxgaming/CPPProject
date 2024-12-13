@@ -2,7 +2,7 @@
 
 Ogre::Ogre()
 {
-    setHealth(30);
-    setArmorClass(14);
-    setattaque(10);
+    Health = 30;
+    armorClass = 14;
+    Degats = 10;
 }

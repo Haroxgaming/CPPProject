@@ -18,8 +18,6 @@ public:
 
     void setATKBuff(bool buff);
     bool getATKBuff();
-    
-    void attack(Character& target);
 
     void setGold(int money);
     int getGold();
@@ -28,5 +26,6 @@ public:
     int getSpellNumber();
 
     void checkEndGame();
-    
+    virtual void attack(Character& target, bool crit);
+    virtual void rollDice (Character& target);
 };

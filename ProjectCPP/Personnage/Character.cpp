@@ -4,7 +4,7 @@ Character::Character()
 {
     Health = 12;
     pvMax = 12;
-    attack = 4;
+    Degats = 4;
     armorClass = 7;
 }
 
@@ -29,14 +29,14 @@ int Character::getPVMax()
     return pvMax;
 }
 
-void Character::setAttack(int ATK)
+void Character::setDegats(int ATK)
 {
-    attack = ATK <= 0 ? 8 : ATK;
+    Degats = ATK <= 0 ? 8 : ATK;
 }
 
-int Character::getAttack()
+int Character::getDegats()
 {
-    return attack;
+    return Degats;
 }
 
 void Character::setArmorClass(int armor)
@@ -47,4 +47,46 @@ void Character::setArmorClass(int armor)
 int Character::getArmorClass()
 {
     return armorClass;
+}
+
+void Character::attack(Character& target, bool crit)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, Degats);
+    int damage = dis(gen);
+    if (crit)
+    {
+        target.setHealth(target.getHealth()-(damage+Degats));
+    }
+    else
+    {
+        target.setHealth(target.getHealth()-damage);
+    }
+}
+
+void Character::rollDice(Character& target)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 20);
+    int dice = dis(gen);
+    if(dice == 20)
+    {
+        attack(target, true);
+    }
+    else
+    {
+        if (dice>target.getArmorClass())
+        {
+            attack(target, false);
+        }
+        else
+        {
+            if (dice==1)
+            {
+                setHealth(getHealth()-4);
+            }
+        }
+    }
 }
