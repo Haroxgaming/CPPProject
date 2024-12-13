@@ -7,7 +7,7 @@ ArmureForge::ArmureForge()
     effets = "Passe la classe d'armure a 11";
 }
 
-void ArmureForge::utiliser(Player& target)
+void ArmureForge::utiliser(Character& target)
 {
-    target.setarmor(11);
+    target.setArmorClass(11);
 }

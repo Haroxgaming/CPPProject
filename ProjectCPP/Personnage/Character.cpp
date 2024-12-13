@@ -49,6 +49,36 @@ int Character::getArmorClass()
     return armorClass;
 }
 
+void Character::setATKBuff(bool buff)
+{
+    ATKBuff = buff;
+}
+
+bool Character::getATKBuff()
+{
+    return ATKBuff;
+}
+
+void Character::setGold(int money)
+{
+    gold = money <= 0 ? 0 : money;
+}
+
+int Character::getGold()
+{
+    return gold;
+}
+
+void Character::setSpellNumber(int spell)
+{
+    spellNumber = spell <= 0 ? 0 : spell;
+}
+
+int Character::getSpellNumber()
+{
+    return spellNumber;
+}
+
 void Character::attack(Character& target, bool crit)
 {
     std::random_device rd;

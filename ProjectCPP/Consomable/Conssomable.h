@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
-#include "../Player.h"
+#include "../Personnage/Character.h"
 
 class Consommable {
 protected:
@@ -11,7 +11,7 @@ protected:
 
 public:
     Consommable();
-    virtual void utiliser(Player& target) = 0; 
+    virtual void utiliser(Character& target) = 0; 
     virtual void afficherInfo() const;
 };
 

@@ -4,11 +4,7 @@
 class Player : public Character
 {
 private:
-    std::string nom;
-    bool ATKBuff = false;
-    int inventory [5];
-    int gold;
-    int spellNumber;
+    
 
 public:
     
@@ -16,14 +12,14 @@ public:
     Player();    
     Player(const std::string& name);
 
-    void setATKBuff(bool buff);
-    bool getATKBuff();
+    virtual void setATKBuff(bool buff);
+    virtual bool getATKBuff();
 
-    void setGold(int money);
-    int getGold();
+    virtual void setGold(int money);
+    virtual int getGold();
 
-    void setSpellNumber(int spell);
-    int getSpellNumber();
+    virtual void setSpellNumber(int spell);
+    virtual int getSpellNumber();
 
     void checkEndGame();
     virtual void attack(Character& target, bool crit);

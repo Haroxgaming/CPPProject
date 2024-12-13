@@ -760,7 +760,6 @@
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
     <ClCompile Include="Room\Lucky\Treasure.cpp" />
-    <ClCompile Include="Room\Normal\Deal.cpp" />
     <ClCompile Include="Room\Normal\EnnemisRoom.cpp" />
     <ClCompile Include="Room\Normal\Nothing.cpp" />
     <ClCompile Include="Room\Room.cpp">
@@ -1085,7 +1084,6 @@
     <ClInclude Include="Room\Lucky\RestZone.h" />
     <ClInclude Include="Room\Lucky\Shop.h" />
     <ClInclude Include="Room\Lucky\Treasure.h" />
-    <ClInclude Include="Room\Normal\Deal.h" />
     <ClInclude Include="Room\Normal\EnnemisRoom.h" />
     <ClInclude Include="Room\Normal\Nothing.h" />
     <ClInclude Include="Room\Room.h" />

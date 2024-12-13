@@ -5,5 +5,5 @@ class EpeeAdamantite : public Consommable
 {
 public:
     EpeeAdamantite();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

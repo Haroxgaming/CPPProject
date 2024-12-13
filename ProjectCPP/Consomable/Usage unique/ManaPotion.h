@@ -5,5 +5,5 @@ class ManaPotion : public Consommable
 {
 public:
     ManaPotion();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

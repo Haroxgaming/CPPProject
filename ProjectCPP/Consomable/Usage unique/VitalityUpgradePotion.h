@@ -5,5 +5,5 @@ class VitalityUpgradePotion : public Consommable
 {
 public:
     VitalityUpgradePotion();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

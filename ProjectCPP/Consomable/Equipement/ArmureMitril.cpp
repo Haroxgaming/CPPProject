@@ -7,7 +7,7 @@ ArmureMitril::ArmureMitril()
     effets = "Passe la classe d'armure a 12";
 }
 
-void ArmureMitril::utiliser(Player& target)
+void ArmureMitril::utiliser(Character& target)
 {
-    target.setarmor(12);
+    target.setArmorClass(12);
 }

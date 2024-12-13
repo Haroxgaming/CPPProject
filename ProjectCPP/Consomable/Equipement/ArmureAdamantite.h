@@ -5,5 +5,5 @@ class ArmureAdamantite : public Consommable
 {
 public:
     ArmureAdamantite();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

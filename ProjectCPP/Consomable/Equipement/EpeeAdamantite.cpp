@@ -7,7 +7,7 @@ EpeeAdamantite::EpeeAdamantite()
     effets = "Passe l'attaque du joueur a 1D20";
 }
 
-void EpeeAdamantite::utiliser(Player& target)
+void EpeeAdamantite::utiliser(Character& target)
 {
-    target.setAttaque(20);
+    target.setDegats(20);
 }

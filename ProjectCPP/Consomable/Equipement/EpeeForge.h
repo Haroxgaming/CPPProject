@@ -5,5 +5,5 @@ class EpeeForge : public Consommable
 {
 public:
     EpeeForge();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

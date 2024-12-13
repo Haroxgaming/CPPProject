@@ -7,7 +7,7 @@ EpeeForge::EpeeForge()
     effets = "Passe l'attaque du joueur a 1D10";
 }
 
-void EpeeForge::utiliser(Player& target)
+void EpeeForge::utiliser(Character& target)
 {
-    target.setAttaque(10);
+    target.setDegats(10);
 }

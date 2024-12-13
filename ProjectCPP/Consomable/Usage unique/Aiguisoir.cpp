@@ -7,7 +7,7 @@ Aiguisoir::Aiguisoir()
     effets = "Permet de faire +5 dégâts sur la prochaine attaque";
 }
 
-void Aiguisoir::utiliser(Player& target)
+void Aiguisoir::utiliser(Character& target)
 {
     target.setATKBuff(true);
 }

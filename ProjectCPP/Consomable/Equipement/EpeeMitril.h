@@ -5,5 +5,5 @@ class EpeeMitril : public Consommable
 {
 public:
     EpeeMitril();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

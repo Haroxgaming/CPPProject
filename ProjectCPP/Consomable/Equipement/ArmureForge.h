@@ -5,5 +5,5 @@ class ArmureForge : public Consommable
 {
 public:
     ArmureForge();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
 };

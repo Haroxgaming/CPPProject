@@ -8,7 +8,7 @@ VitalityUpgradePotion::VitalityUpgradePotion()
     effets = "Augmente les PV max de 5";
 }
 
-void VitalityUpgradePotion::utiliser(Player& target)
+void VitalityUpgradePotion::utiliser(Character& target)
 {
-    target.setPVMax(5);
+    target.SetPVMax(5);
 }

@@ -7,7 +7,7 @@ ManaPotion::ManaPotion()
     effets = "Permet de gagner 1 utilisation de sort";
 }
 
-void ManaPotion::utiliser(Player& target)
+void ManaPotion::utiliser(Character& target)
 {
-    target.setPointDeVie(target.getPointDeVie()+1);
+    target.setHealth(target.getHealth()+1);
 }

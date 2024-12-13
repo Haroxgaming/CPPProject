@@ -7,7 +7,7 @@ EpeeMitril::EpeeMitril()
     effets = "Passe l'attaque du joueur a 1D12";
 }
 
-void EpeeMitril::utiliser(Player& target)
+void EpeeMitril::utiliser(Character& target)
 {
-    target.setAttaque(12);
+    target.setDegats(12);
 }

@@ -2,7 +2,7 @@
 
 Player::Player()
 {
-    nom = "Rémi";
+    nom = "Héro";
     Health = 20;
     pvMax = 20;
     Degats = 8;

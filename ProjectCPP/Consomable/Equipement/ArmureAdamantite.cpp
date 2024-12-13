@@ -7,7 +7,7 @@ ArmureAdamantite::ArmureAdamantite()
     effets = "Passe la classe d'armure a 14";
 }
 
-void ArmureAdamantite::utiliser(Player& target)
+void ArmureAdamantite::utiliser(Character& target)
 {
-    target.setarmor(14);
+    target.setArmorClass(14);
 }

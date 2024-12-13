@@ -10,6 +10,6 @@ private:
 public:
     
     HealthPotion();
-    void utiliser(Player& target);
+    void utiliser(Character& target);
     
 };
