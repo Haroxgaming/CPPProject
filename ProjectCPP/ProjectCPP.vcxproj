@@ -165,6 +165,7 @@
     <ClCompile Include="Consomable\Usage unique\HealthPotion.cpp" />
     <ClCompile Include="Consomable\Usage unique\ManaPotion.cpp" />
     <ClCompile Include="Consomable\Usage unique\VitalityUpgradePotion.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Personnage\Character.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -1074,6 +1075,7 @@
     <ClInclude Include="Consomable\Usage unique\HealthPotion.h" />
     <ClInclude Include="Consomable\Usage unique\ManaPotion.h" />
     <ClInclude Include="Consomable\Usage unique\VitalityUpgradePotion.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Personnage\Character.h" />
     <ClInclude Include="Personnage\Ennemis\ennemy.h" />
     <ClInclude Include="Personnage\Ennemis\Goblin.h" />
