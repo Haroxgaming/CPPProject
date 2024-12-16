@@ -9,6 +9,7 @@ int Trap::roomEffect(Player& target)
     int damage = dis(gen);
     target.setHealth(target.getHealth() - damage);
     std::cout<<"Vous venez de perdre "<< damage << "PV!!!"<<std::endl;
+    Sleep(2000);
     target.checkEndGame();
     return 0;
 }

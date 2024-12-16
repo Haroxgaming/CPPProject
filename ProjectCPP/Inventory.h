@@ -4,16 +4,14 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "Consomable/Conssomable.h"
 
 class Item {
 private:
     std::string name;
     int quantity;
     
-public:
-    Item(const std::string& name, int quantity);
-
-   
+public:   
     std::string getName() const;
     int getQuantity() const;
     

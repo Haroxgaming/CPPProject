@@ -5,4 +5,5 @@
 class EnnemisPuissant : public Room
 {
 public:
+    virtual int roomEffect(Player& target);
 };

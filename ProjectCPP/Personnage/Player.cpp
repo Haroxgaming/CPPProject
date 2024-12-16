@@ -1,5 +1,7 @@
 ﻿#include "Player.h"
 
+#include <windows.h>
+
 Player::Player()
 {
     nom = "Héro";
@@ -54,6 +56,8 @@ void Player::checkEndGame()
     if (getHealth() <= 0)
     {
         std::cout<<"fin de partie vous êtes mort!"<<std::endl;
+        Sleep(2000);
+        exit(0);
     }
 }
 
@@ -71,6 +75,7 @@ void Player::attack(Character& target, bool crit)
     {
         target.setHealth(target.getHealth()-damage);
     }
+    std::cout<<"PV de l'ennemi restant :"<<target.getHealth()<<std::endl;
 }
 
 void Player::rollDice(Character& target)
@@ -79,8 +84,10 @@ void Player::rollDice(Character& target)
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, 20);
     int dice = dis(gen);
+    std::cout<<"lancer : "<<dice<<std::endl;
     if(dice == 20)
     {
+        std::cout<<" REUSSITE CRITIQUE"<<std::endl;
         attack(target, true);
     }
     else
@@ -93,9 +100,27 @@ void Player::rollDice(Character& target)
         {
             if (dice==1)
             {
+                std::cout<<" ECHEC CRITIQUE"<<std::endl;
                 setHealth(getHealth()-4);
+                std::cout<<"PV de l'ennemi restant :"<<target.getHealth()<<std::endl;
                 checkEndGame();
             }
         }
     }
+}
+
+void Player::Heal()
+{
+    Health = Health+8;
+    Health = Health <= pvMax ? pvMax : Health;
+    spellNumber--;
+    spellNumber = spellNumber <= 0 ? 0 : spellNumber;
+    std::cout<<"PV restant: "<<Health<<std::endl;
+    std::cout<<"Spell restant: "<<spellNumber<<std::endl;
+}
+
+void Player::fireBall(Character& target)
+{
+    target.setHealth(target.getHealth()-10);
+    std::cout<<"Degats infliger: 10"<<std::endl<<"PV de l'ennemi restant: "<<target.getHealth()<<std::endl;
 }

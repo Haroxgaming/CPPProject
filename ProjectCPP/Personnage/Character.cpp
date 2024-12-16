@@ -1,5 +1,7 @@
 ﻿#include "Character.h"
 
+#include <windows.h>
+
 Character::Character()
 {
     Health = 12;
@@ -37,6 +39,16 @@ void Character::setDegats(int ATK)
 int Character::getDegats()
 {
     return Degats;
+}
+
+void Character::setName(std::string name)
+{
+    nom=name;
+}
+
+std::string Character::getName()
+{
+    return nom;
 }
 
 void Character::setArmorClass(int armor)
@@ -79,6 +91,10 @@ int Character::getSpellNumber()
     return spellNumber;
 }
 
+void Character::chekEndGame()
+{
+}
+
 void Character::attack(Character& target, bool crit)
 {
     std::random_device rd;
@@ -87,12 +103,12 @@ void Character::attack(Character& target, bool crit)
     int damage = dis(gen);
     if (crit)
     {
-        target.setHealth(target.getHealth()-(damage+Degats));
+        damage = damage+Degats;
     }
-    else
-    {
-        target.setHealth(target.getHealth()-damage);
-    }
+    target.setHealth(target.getHealth()-damage);
+    std::cout<<"PV restant :"<<target.getHealth()<<std::endl;
+    Sleep(2000);
+    system("cls");
 }
 
 void Character::rollDice(Character& target)
@@ -101,8 +117,10 @@ void Character::rollDice(Character& target)
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, 20);
     int dice = dis(gen);
+    std::cout<<"lancer : "<<dice<<std::endl;
     if(dice == 20)
     {
+        std::cout<<" REUSSITE CRITIQUE"<<std::endl;
         attack(target, true);
     }
     else
@@ -116,7 +134,17 @@ void Character::rollDice(Character& target)
             if (dice==1)
             {
                 setHealth(getHealth()-4);
+                std::cout<<" ECHEC CRITIQUE"<<std::endl;
             }
         }
     }
+}
+
+int Character::getInitiative()
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 20);
+    int dice = dis(gen);
+    return dice;
 }

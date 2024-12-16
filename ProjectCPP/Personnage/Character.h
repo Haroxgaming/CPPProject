@@ -3,6 +3,7 @@
 #include <string>
 #include <random>
 #include <iostream>
+#include <windows.h>
 
 class Character
 {
@@ -28,6 +29,9 @@ public:
     void setDegats(int ATK);
     int getDegats();
 
+    void setName(std::string name);
+    std::string getName();
+
     void setArmorClass(int armor);
     int getArmorClass();
     
@@ -40,6 +44,8 @@ public:
     virtual void setSpellNumber(int spell);
     virtual int getSpellNumber();
 
+    virtual void chekEndGame();
     virtual void attack(Character& target, bool crit);
     virtual void rollDice (Character& target);
+    int getInitiative();
 };

@@ -1,6 +1,8 @@
 ﻿#include "ennemy.h"
 
-void ennemy::attack(Player& target, bool crit)
+
+
+void ennemy::attack(Character& target, bool crit)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -9,11 +11,17 @@ void ennemy::attack(Player& target, bool crit)
     if (crit)
     {
         target.setHealth(target.getHealth()-(damage+Degats));
-        target.checkEndGame();
+        std::cout<<"PV restant :"<<target.getHealth()<<std::endl;
+        Sleep(2000);
+        system("cls");
+        target.chekEndGame();
     }
     else
     {
         target.setHealth(target.getHealth()-damage);
-        target.checkEndGame();
+        std::cout<<"PV restant :"<<target.getHealth()<<std::endl;
+        Sleep(2000);
+        system("cls");
+        target.chekEndGame();
     }
 }

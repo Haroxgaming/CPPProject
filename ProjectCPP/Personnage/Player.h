@@ -21,7 +21,9 @@ public:
     virtual void setSpellNumber(int spell);
     virtual int getSpellNumber();
 
-    void checkEndGame();
+    virtual void checkEndGame();
     virtual void attack(Character& target, bool crit);
     virtual void rollDice (Character& target);
+    void Heal();
+    void fireBall(Character& target);
 };

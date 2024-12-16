@@ -1,10 +1,10 @@
 ﻿#pragma once
-#include "../Player.h"
+#include "../Character.h"
 
 class ennemy : public Character
 {
 public:
     
-    virtual void attack(Player& target, bool crit);
+    virtual void attack(Character& target, bool crit);
     
 };

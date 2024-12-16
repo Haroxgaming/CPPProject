@@ -1,9 +1,6 @@
 ﻿#include "inventory.h"
 
 // ======= Item =======
-Item::Item(const std::string& name, int quantity, double price)
-    : name(name), quantity(quantity) {}
-
 std::string Item::getName() const {
     return name;
 }
@@ -38,7 +35,7 @@ void Inventaire::removeItem(const std::string& itemName) {
     for (auto it = items.begin(); it != items.end(); ++it) {
         if (it->getName() == itemName) {
             items.erase(it);
-            std::cout << "Objet supprimé : " << itemName << "\n";
+            std::cout << "Objet utilisé : " << itemName << "\n";
             return;
         }
     }

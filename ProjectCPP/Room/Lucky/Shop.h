@@ -3,4 +3,6 @@
 
 class Shop : public Room
 {
+public:
+    virtual int roomEffect();
 };
