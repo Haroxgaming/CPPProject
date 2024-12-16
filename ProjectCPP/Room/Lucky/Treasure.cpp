@@ -6,5 +6,5 @@ int Treasure::roomEffect()
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, 14);
     int objet = dis(gen);
-    return 0;
+    return objet;
 }

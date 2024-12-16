@@ -1,53 +1,69 @@
 ﻿#include "inventory.h"
 
 // ======= Item =======
-std::string Item::getName() const {
+std::string Inventaire::getName() const {
     return name;
 }
 
-int Item::getQuantity() const {
+int Inventaire::getQuantity() const {
     return quantity;
 }
 
+void Inventaire::setEffect(std::string description)
+{
+    effect = description;
+}
 
-void Item::setQuantity(int qty) {
+std::string Inventaire::getEffect()
+{
+    return effect;
+}
+
+
+void Inventaire::setQuantity(int qty) {
     quantity = qty;
 }
 
-void Item::display() const {
-    std::cout << "Nom: " << name
-              << ", Quantité: " << quantity;
-              
+int Inventaire::getItemSize()
+{
+    return items.size();
 }
 
-// ======= Inventaire =======
-void Inventaire::addItem(const Item& item) {
-    for (auto& existingItem : items) {
-        if (existingItem.getName() == item.getName()) {
-            existingItem.setQuantity(existingItem.getQuantity() + item.getQuantity());
-            return;
+void Inventaire::addItem(Consommable& item)
+{
+    bool exist = false;
+    for (int i = 0; i < items.size();i++)
+    {
+        if (items[i].getName() == item.getName())
+        {
+            items[i].setQuantity(items[i].getQuantity()+1);
+            exist = true;
         }
     }
-    items.push_back(item);
+    if (!exist)
+    {
+        items.push_back(item);
+    }
 }
 
-void Inventaire::removeItem(const std::string& itemName) {
-    for (auto it = items.begin(); it != items.end(); ++it) {
-        if (it->getName() == itemName) {
-            items.erase(it);
-            std::cout << "Objet utilisé : " << itemName << "\n";
-            return;
+void Inventaire::removeItem(Consommable& item)
+{
+    for (int i = 0; i < items.size();i++)
+    {
+        if (items[i].getName() == item.getName())
+        {
+            items[i].setQuantity(items[i].getQuantity()-1);
         }
     }
-    std::cout << "Objet non trouvé : " << itemName << "\n";
 }
 
-void Inventaire::displayInventory() const {
-    std::cout << "=== Inventaire ===\n";
-    for (const auto& item : items) {
-        item.display();
-    }
-    if (items.empty()) {
-        std::cout << "Inventaire vide.\n";
-    }
+void Inventaire::displayInventory(int index)
+{
+    std::cout<< items[index];
+    std::cout<< "Quantity : " << items[index].getQuantity()<<std::endl;
+}
+
+void Inventaire::use(int index, Player& target)
+{
+    items[index].utiliser(target);    
 }
